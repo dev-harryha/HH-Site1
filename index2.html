@@ -76,10 +76,11 @@
 			initESW(null);
 		};
 		document.body.appendChild(s);
+	} else {
+		console.log('emb already init');
 		if(document.referrer != "") {
 			document.getElementsByTagName('embeddedservice-chat-header')[0].minimize();
 		}
-	} else {
 		initESW('https://service.force.com');
 	}
 </script>
