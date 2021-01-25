@@ -27,12 +27,6 @@
 		outline: 1px solid #005290;
 	}
 </style>
-<script type='text/javascript'>
-	var minChat = function() {
-		document.getElementsByTagName('embeddedservice-chat-header')[0].minimize();
-	};
-	minChat();
-</script>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
@@ -82,6 +76,9 @@
 			initESW(null);
 		};
 		document.body.appendChild(s);
+		if(document.referrer != "") {
+			document.getElementsByTagName('embeddedservice-chat-header')[0].minimize();
+		}
 	} else {
 		initESW('https://service.force.com');
 	}
