@@ -77,13 +77,13 @@
 		};
 		document.body.appendChild(s);
 	} else {
-		console.log('emb already init');
-		
+		if(document.referrer != "") {
+			console.log('setting session data to true');
+			window.embedded_svc.setSessionData('ESW_IS_MINIMIZED', true);
+		}
 		initESW('https://service.force.com');
 		
-		if(document.referrer != "") {
-			document.getElementsByTagName('embeddedservice-chat-header')[0].minimize();
-		}
+		
 	}
 </script>
 
