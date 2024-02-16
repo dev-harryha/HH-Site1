@@ -5,6 +5,25 @@
 </head>
 <body>
 	Hello World!
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DDo000000sbnY',
+				'MIAW_Customer_Support',
+				'https://ability-ruby-374-dev-ed.develop.my.site.com/ESWMIAWCustomerSupport1708046832504',
+				{
+					scrt2URL: 'https://ability-ruby-374-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://ability-ruby-374-dev-ed.develop.my.site.com/ESWMIAWCustomerSupport1708046832504/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 </body>
 </html>
